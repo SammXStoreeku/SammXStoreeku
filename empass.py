@@ -4,7 +4,7 @@
 # Name           : Moonton Account Checker                                #
 # File           : cek.py                                                 #
 # Author         : Sam storee                                             #
-# Github         : https://github.com/aditarlos                           #                                     #                                        ##
+# Github         : https://github.com/SammXStoreeku                  #                                     #                                        ##
 ###########################################################################
 
 import os, sys, hashlib, json
