@@ -1,8 +1,11 @@
 
-
-1. pkg update && pkg upgrade
-2. pkg install git
-3. pkg install python
-4. pip install mechanize
-5. pip install requests
+$ pkg update && pkg upgrade
+$ pkg install git
+$ pkg install python
+$ pip install mechanize
+$ pip install requests
+$ git clone https://github.com/SammXStoreeku/SammXStoreeku/tree/main
+$ cd SamXStoreeku
+$ ls
+$ empass.py
 
