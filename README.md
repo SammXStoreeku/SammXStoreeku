@@ -9,11 +9,11 @@ $pip install mechanize
 
 $pip install requests
 
-$git clone https://github.com/SammXStoreeku/SammXStoreeku
+$git clone https://github.com/SammXStoreeku
 
 $cd SamXStoreeku
 
 $ls
 
-$python empass.py
+$python empass.sh
 
