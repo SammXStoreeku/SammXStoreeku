@@ -15,5 +15,5 @@ $cd SamXStoreeku
 
 $ls
 
-$python empass.sh
+$python SammXStoreeku.py
 
